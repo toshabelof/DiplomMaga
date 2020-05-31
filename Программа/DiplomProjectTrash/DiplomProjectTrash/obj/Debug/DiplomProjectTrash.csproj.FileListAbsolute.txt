@@ -1,0 +1,13 @@
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.csprojAssemblyReference.cache
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.Archive.resources
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.AuthForm.resources
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.GlobalMenu.resources
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.Properties.Resources.resources
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.Settings.resources
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.csproj.GenerateResource.cache
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\bin\Debug\DiplomProjectTrash.exe.config
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\bin\Debug\DiplomProjectTrash.exe
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\bin\Debug\DiplomProjectTrash.pdb
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.exe
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.pdb
+C:\Users\shado\Desktop\Диплом\Программа\DiplomProjectTrash\DiplomProjectTrash\obj\Debug\DiplomProjectTrash.AddIPcam.resources
