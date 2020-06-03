@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DiplomProjectTrash.MODEL;
+using System;
+using System.Collections.Generic;
 using System.Data.OleDb;
 using System.IO;
 using System.Windows.Forms;
@@ -12,6 +14,9 @@ namespace DiplomProjectTrash.VIEW_MODEL
         public string db_password { get; set; }
 
         OleDbConnection myConnection;
+        LOCATION myLocation;
+
+        string SQL_GET_LOCATION = "select * from location";
 
 
         public DB_UTIL(string name, string login, string password)
@@ -88,6 +93,33 @@ namespace DiplomProjectTrash.VIEW_MODEL
             {
                 LIB_UTIL.MassageError(ex);
             }
+        }
+
+        public void GET_ARCHIVE()
+        { }
+
+        public void SET_IP_CAM()
+        { }
+
+        public List<LOCATION> GET_LOCATION()
+        {
+            OleDbDataReader reader = new OleDbCommand(SQL_GET_LOCATION, myConnection).ExecuteReader();
+            List<LOCATION> listLocation = new List<LOCATION>();
+
+            while (reader.Read())
+            {
+                listLocation.Add(new LOCATION(Convert.ToInt32(reader[0]), reader[1].ToString()));
+            }
+
+            // закрываем OleDbDataReader
+            reader.Close();
+
+            return listLocation;
+        }
+
+        public void GET_IP_CAM(string ip, string descr, int location_num_id)
+        {
+           
         }
     }
 }

@@ -6,12 +6,13 @@ namespace DiplomProjectTrash
 {
     public partial class Settings : Form
     {
-        public Settings()
+        DB_UTIL dB_UTIL;
+
+        public Settings(DB_UTIL dB_UTIL)
         {
             InitializeComponent();
+            this.dB_UTIL = dB_UTIL;
         }
-
-        DB_UTIL dB_UTIL = new DB_UTIL();
 
         // Метод вызывается после загрузки формы
         private void Settings_Load(object sender, EventArgs e)

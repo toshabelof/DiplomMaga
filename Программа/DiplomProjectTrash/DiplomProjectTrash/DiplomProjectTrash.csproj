@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MODEL\ARCHIVE.cs" />
+    <Compile Include="MODEL\LOCATION.cs" />
     <Compile Include="VIEWS\AddIPcam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +123,6 @@
   <ItemGroup>
     <None Include="Resources\onnx_logo_main.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MODEL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,17 +13,17 @@ namespace DiplomProjectTrash
 {
     public partial class GlobalMenu : Form
     {
+        static DB_UTIL dB_UTIL = new DB_UTIL();
+
         public GlobalMenu()
         {
             InitializeComponent();
         }
 
         AuthForm authForm = new AuthForm();
-        Settings settingsForm = new Settings();
+        Settings settingsForm = new Settings(dB_UTIL);
         Archive archiveForm = new Archive();
-        AddIPcam addIPcamForm = new AddIPcam();
-
-        DB_UTIL dB_UTIL = new DB_UTIL();
+        AddIPcam addIPcamForm = new AddIPcam(dB_UTIL);
 
         // Метод вызывается перед открытием формы
         private void GlobalMenu_Load(object sender, EventArgs e)
