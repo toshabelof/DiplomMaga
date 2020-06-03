@@ -18,23 +18,23 @@ namespace DiplomProjectTrash
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox2.Text))
-            {
-                MessageBox.Show(@"Ошибка аутентификации. Поле ""Логин"" не может быть пустым.");
-                return;
-            }
+            //if (string.IsNullOrEmpty(textBox2.Text))
+            //{
+            //    MessageBox.Show(@"Ошибка аутентификации. Поле ""Логин"" не может быть пустым.");
+            //    return;
+            //}
             
-            if (!checkLogin(textBox1.Text))
-            {
-                MessageBox.Show("Ошибка аутентификации. Проверьте введеный логин.");
-                return;
-            }
+            //if (!checkLogin(textBox1.Text))
+            //{
+            //    MessageBox.Show("Ошибка аутентификации. Проверьте введеный логин.");
+            //    return;
+            //}
 
-            if (string.IsNullOrEmpty(textBox2.Text))
-            {
-                MessageBox.Show(@"Ошибка аутентификации. Поле ""Пароль"" не может быть пустым.");
-                return;
-            }
+            //if (string.IsNullOrEmpty(textBox2.Text))
+            //{
+            //    MessageBox.Show(@"Ошибка аутентификации. Поле ""Пароль"" не может быть пустым.");
+            //    return;
+            //}
 
             vStatusAuth = true;
             this.Close();

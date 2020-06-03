@@ -246,12 +246,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(429, 117);
+            this.button1.Location = new System.Drawing.Point(419, 117);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 30);
+            this.button1.Size = new System.Drawing.Size(126, 30);
             this.button1.TabIndex = 3;
             this.button1.Text = "Подключиться";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -268,6 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 368);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Settings";
             this.Text = "Settings";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Settings_FormClosing);

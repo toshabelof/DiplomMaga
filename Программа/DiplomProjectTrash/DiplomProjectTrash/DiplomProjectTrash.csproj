@@ -45,49 +45,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddIPcam.cs">
+    <Compile Include="VIEWS\AddIPcam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddIPcam.Designer.cs">
+    <Compile Include="VIEWS\AddIPcam.Designer.cs">
       <DependentUpon>AddIPcam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Archive.cs">
+    <Compile Include="VIEWS\Archive.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Archive.Designer.cs">
+    <Compile Include="VIEWS\Archive.Designer.cs">
       <DependentUpon>Archive.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthForm.cs">
+    <Compile Include="VIEWS\AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthForm.Designer.cs">
+    <Compile Include="VIEWS\AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalMenu.cs">
+    <Compile Include="VIEWS\GlobalMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GlobalMenu.Designer.cs">
+    <Compile Include="VIEWS\GlobalMenu.Designer.cs">
       <DependentUpon>GlobalMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW_MODEL\LIB_UTIL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs">
+    <Compile Include="VIEWS\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
+    <Compile Include="VIEWS\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings1.cs" />
-    <EmbeddedResource Include="AddIPcam.resx">
+    <Compile Include="VIEW_MODEL\DB_UTIL.cs" />
+    <EmbeddedResource Include="VIEWS\AddIPcam.resx">
       <DependentUpon>AddIPcam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Archive.resx">
+    <EmbeddedResource Include="VIEWS\Archive.resx">
       <DependentUpon>Archive.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthForm.resx">
+    <EmbeddedResource Include="VIEWS\AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GlobalMenu.resx">
+    <EmbeddedResource Include="VIEWS\GlobalMenu.resx">
       <DependentUpon>GlobalMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,7 +102,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Settings.resx">
+    <EmbeddedResource Include="VIEWS\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -118,6 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\onnx_logo_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MODEL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
