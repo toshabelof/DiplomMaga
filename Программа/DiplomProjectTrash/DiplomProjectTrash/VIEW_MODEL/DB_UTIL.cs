@@ -73,26 +73,12 @@ namespace DiplomProjectTrash.VIEW_MODEL
 
         public void DB_OPEN()
         {
-            try
-            {
-                myConnection.Open();
-            }
-            catch (Exception ex)
-            {
-                LIB_UTIL.MassageError(ex);
-            }
+            myConnection.Open();
         }
 
         public void DB_CLOSE()
         {
-            try
-            {
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                LIB_UTIL.MassageError(ex);
-            }
+            myConnection.Close();
         }
 
         public void GET_ARCHIVE()

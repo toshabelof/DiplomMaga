@@ -1,6 +1,7 @@
 ﻿using System;
 using DiplomProjectTrash.VIEW_MODEL;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace DiplomProjectTrash
 {
@@ -39,7 +40,18 @@ namespace DiplomProjectTrash
             dB_UTIL.db_password = textBox2.Text;
             dB_UTIL.db_name = textBox3.Text;
 
-            dB_UTIL.DB_CONNECT();
+            try
+            {
+                dB_UTIL.DB_CONNECT();
+                label6.Text = "OK!";
+                label6.ForeColor = Color.Green;
+            }
+            catch (Exception ex)
+            {
+                label6.Text = "Error!";
+                label6.ForeColor = Color.Red; 
+                LIB_UTIL.MassageError(ex);                
+            }
         }
 
         //Метод вызывается до закрытия формы
