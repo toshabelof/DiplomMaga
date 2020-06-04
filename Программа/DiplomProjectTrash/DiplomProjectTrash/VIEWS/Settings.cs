@@ -2,17 +2,20 @@
 using DiplomProjectTrash.VIEW_MODEL;
 using System.Windows.Forms;
 using System.Drawing;
+using DiplomProjectTrash.MODEL;
 
 namespace DiplomProjectTrash
 {
     public partial class Settings : Form
     {
         DB_UTIL dB_UTIL;
+        SETTING sETTING;
 
-        public Settings(DB_UTIL dB_UTIL)
+        public Settings(DB_UTIL dB_UTIL, SETTING sETTING)
         {
             InitializeComponent();
             this.dB_UTIL = dB_UTIL;
+            this.sETTING = sETTING;
         }
 
         // Метод вызывается после загрузки формы
@@ -45,12 +48,16 @@ namespace DiplomProjectTrash
                 dB_UTIL.DB_CONNECT();
                 label6.Text = "OK!";
                 label6.ForeColor = Color.Green;
+
+                sETTING.db_status = label6.Text;
             }
             catch (Exception ex)
             {
                 label6.Text = "Error!";
                 label6.ForeColor = Color.Red; 
-                LIB_UTIL.MassageError(ex);                
+                LIB_UTIL.MassageError(ex);
+
+                sETTING.db_status = label6.Text;
             }
         }
 

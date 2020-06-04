@@ -16,8 +16,11 @@ namespace DiplomProjectTrash.VIEW_MODEL
         OleDbConnection myConnection;
         LOCATION myLocation;
 
-        string SQL_GET_LOCATION = "select * from location";
-
+        private string SQL_GET_LOCATION = "select * from location";
+        private string SQL_GET_ARCHIVE_ALL = "select a.photo, a.coordinatae, ip.ip, l.description, a.accauting_date" +
+                                             "  from archive a, ip_cam ip, location l" +
+                                             " where a.ip_cam_num_id = ip.ip_cam_num_id" +
+                                             "   and ip.location_num_id = l.location_num_id;";
 
         public DB_UTIL(string name, string login, string password)
         {
@@ -81,8 +84,20 @@ namespace DiplomProjectTrash.VIEW_MODEL
             myConnection.Close();
         }
 
-        public void GET_ARCHIVE()
-        { }
+        public List<ARCHIVE> GET_ARCHIVE()
+        {
+            OleDbDataReader reader = new OleDbCommand(SQL_GET_ARCHIVE_ALL, myConnection).ExecuteReader();
+            List<ARCHIVE> listArchive = new List<ARCHIVE>();
+
+            while (reader.Read())
+            {
+                listArchive.Add(new ARCHIVE(reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString()));
+            }
+
+            reader.Close();
+
+            return listArchive;
+        }
 
         public void SET_IP_CAM()
         { }
@@ -97,7 +112,6 @@ namespace DiplomProjectTrash.VIEW_MODEL
                 listLocation.Add(new LOCATION(Convert.ToInt32(reader[0]), reader[1].ToString()));
             }
 
-            // закрываем OleDbDataReader
             reader.Close();
 
             return listLocation;

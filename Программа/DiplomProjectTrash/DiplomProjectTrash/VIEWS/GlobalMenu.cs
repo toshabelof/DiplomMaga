@@ -1,4 +1,5 @@
-﻿using DiplomProjectTrash.VIEW_MODEL;
+﻿using DiplomProjectTrash.MODEL;
+using DiplomProjectTrash.VIEW_MODEL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace DiplomProjectTrash
     public partial class GlobalMenu : Form
     {
         static DB_UTIL dB_UTIL = new DB_UTIL();
+        static SETTING sETTING = new SETTING();
 
         public GlobalMenu()
         {
@@ -21,8 +23,8 @@ namespace DiplomProjectTrash
         }
 
         AuthForm authForm = new AuthForm();
-        Settings settingsForm = new Settings(dB_UTIL);
-        Archive archiveForm = new Archive();
+        Settings settingsForm = new Settings(dB_UTIL, sETTING);
+        Archive archiveForm = new Archive(dB_UTIL);
         AddIPcam addIPcamForm = new AddIPcam(dB_UTIL);
 
         // Метод вызывается перед открытием формы
@@ -41,6 +43,7 @@ namespace DiplomProjectTrash
         private void button1_Click(object sender, EventArgs e)
         {
             settingsForm.ShowDialog();
+            label5.Text = sETTING.db_status;
         }
 
         // Кнопка "Архив"

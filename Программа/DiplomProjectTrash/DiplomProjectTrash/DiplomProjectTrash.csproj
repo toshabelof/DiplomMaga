@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="MODEL\ARCHIVE.cs" />
     <Compile Include="MODEL\LOCATION.cs" />
+    <Compile Include="MODEL\SETTING.cs" />
     <Compile Include="VIEWS\AddIPcam.cs">
       <SubType>Form</SubType>
     </Compile>
